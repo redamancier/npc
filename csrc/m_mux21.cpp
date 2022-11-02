@@ -1,11 +1,11 @@
 #include "verilated.h"
 #include "verilated_vcd_c.h"
-#include "obj_dir/Vmux21.h"
+#include "Vtop.h"
 
 VerilatedContext* contextp = NULL;
 VerilatedVcdC* tfp = NULL;
 
-static Vmux21* top;
+static Vtop* top;
 
 void step_and_dump_wave(){
   top->eval();
@@ -15,10 +15,10 @@ void step_and_dump_wave(){
 void sim_init(){
   contextp = new VerilatedContext;
   tfp = new VerilatedVcdC;
-  top = new Vmux21;
+  top = new Vtop;
   contextp->traceEverOn(true);
   top->trace(tfp, 0);
-  tfp->open("dump.vcd");
+  tfp->open("obj_dir/dump.vcd");
 }
 
 void sim_exit(){
