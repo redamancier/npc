@@ -11,13 +11,13 @@ sim:
 	@echo
 	@echo "- VERILATE ----------------"
 	# $(VERILATOR) $(VERILATOR_FLAGS) $(VERILATOR_INPUT)
-	verilator -Wall --cc --exe --build csrc/m_mux21.cpp vsrc/top.v --trace
+	verilator -Wall --cc --exe --build csrc/mux41.cpp vsrc/mux41.v --trace
 	#运行verilator，编译仿真模型
 
 	@echo
 	@echo "-- BUILD ------------------"
 	
-	make -C obj_dir -f Vtop.mk Vtop
+	make -C obj_dir -f Vmux41.mk Vmux41
 	#编译可执行文件
 
 	@echo
@@ -25,7 +25,7 @@ sim:
 	# @rm -rf logs
 	# @mkdir -p logs
 	./obj_dir/Vtop
-	gtkwave obj_dir/dump.vcd
+	gtkwave obj_dir/mux41.vcd
 	#运行可执行文件，并运行gtkwave得到仿真波形
 
 	@echo

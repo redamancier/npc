@@ -1,24 +1,24 @@
 // Verilated -*- C++ -*-
 // DESCRIPTION: Verilator output: Tracing implementation internals
 #include "verilated_vcd_c.h"
-#include "Vtop__Syms.h"
+#include "Vmux41__Syms.h"
 
 
-void Vtop___024root__traceChgSub0(Vtop___024root* vlSelf, VerilatedVcd* tracep);
+void Vmux41___024root__traceChgSub0(Vmux41___024root* vlSelf, VerilatedVcd* tracep);
 
-void Vtop___024root__traceChgTop0(void* voidSelf, VerilatedVcd* tracep) {
-    Vtop___024root* const __restrict vlSelf = static_cast<Vtop___024root*>(voidSelf);
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+void Vmux41___024root__traceChgTop0(void* voidSelf, VerilatedVcd* tracep) {
+    Vmux41___024root* const __restrict vlSelf = static_cast<Vmux41___024root*>(voidSelf);
+    Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     if (VL_UNLIKELY(!vlSymsp->__Vm_activity)) return;
     // Body
     {
-        Vtop___024root__traceChgSub0((&vlSymsp->TOP), tracep);
+        Vmux41___024root__traceChgSub0((&vlSymsp->TOP), tracep);
     }
 }
 
-void Vtop___024root__traceChgSub0(Vtop___024root* vlSelf, VerilatedVcd* tracep) {
+void Vmux41___024root__traceChgSub0(Vmux41___024root* vlSelf, VerilatedVcd* tracep) {
     if (false && vlSelf) {}  // Prevent unused
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     vluint32_t* const oldp = tracep->oldp(vlSymsp->__Vm_baseCode + 1);
     if (false && oldp) {}  // Prevent unused
     // Body
@@ -36,10 +36,10 @@ void Vtop___024root__traceChgSub0(Vtop___024root* vlSelf, VerilatedVcd* tracep) 
     }
 }
 
-void Vtop___024root__traceCleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
+void Vmux41___024root__traceCleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
     VlUnpacked<CData/*0:0*/, 1> __Vm_traceActivity;
-    Vtop___024root* const __restrict vlSelf = static_cast<Vtop___024root*>(voidSelf);
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    Vmux41___024root* const __restrict vlSelf = static_cast<Vmux41___024root*>(voidSelf);
+    Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     // Body
     {
         vlSymsp->__Vm_activity = false;

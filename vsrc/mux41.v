@@ -1,10 +1,8 @@
-module top #(
+
+module mux41 #(
 parameter DW = 2
 )(
-    input    [DW-1:0]    data_in0,
-    input    [DW-1:0]    data_in1,
-    input    [DW-1:0]    data_in2,
-    input    [DW-1:0]    data_in3,
+    input    [DW-1:0]    data_in,
     input    [1:0] sel,
     output    [DW-1:0]    data_out
 );
