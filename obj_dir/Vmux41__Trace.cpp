@@ -23,16 +23,9 @@ void Vmux41___024root__traceChgSub0(Vmux41___024root* vlSelf, VerilatedVcd* trac
     if (false && oldp) {}  // Prevent unused
     // Body
     {
-        tracep->chgCData(oldp+0,(vlSelf->data_in0),2);
-        tracep->chgCData(oldp+1,(vlSelf->data_in1),2);
-        tracep->chgCData(oldp+2,(vlSelf->data_in2),2);
-        tracep->chgCData(oldp+3,(vlSelf->data_in3),2);
-        tracep->chgCData(oldp+4,(vlSelf->sel),2);
-        tracep->chgCData(oldp+5,(vlSelf->data_out),2);
-        tracep->chgBit(oldp+6,((0U == (IData)(vlSelf->sel))));
-        tracep->chgBit(oldp+7,((1U == (IData)(vlSelf->sel))));
-        tracep->chgBit(oldp+8,((2U == (IData)(vlSelf->sel))));
-        tracep->chgBit(oldp+9,((3U == (IData)(vlSelf->sel))));
+        tracep->chgCData(oldp+0,(vlSelf->a),4);
+        tracep->chgCData(oldp+1,(vlSelf->s),2);
+        tracep->chgBit(oldp+2,(vlSelf->y));
     }
 }
 

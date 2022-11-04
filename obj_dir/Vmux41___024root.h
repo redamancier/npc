@@ -19,12 +19,9 @@ VL_MODULE(Vmux41___024root) {
   public:
 
     // PORTS
-    VL_IN8(data_in0,1,0);
-    VL_IN8(data_in1,1,0);
-    VL_IN8(data_in2,1,0);
-    VL_IN8(data_in3,1,0);
-    VL_IN8(sel,1,0);
-    VL_OUT8(data_out,1,0);
+    VL_IN8(a,3,0);
+    VL_IN8(s,1,0);
+    VL_OUT8(y,0,0);
 
     // INTERNAL VARIABLES
     Vmux41__Syms* vlSymsp;  // Symbol table

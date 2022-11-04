@@ -12,14 +12,19 @@ VL_INLINE_OPT void Vmux41___024root___combo__TOP__1(Vmux41___024root* vlSelf) {
     Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmux41___024root___combo__TOP__1\n"); );
     // Body
-    vlSelf->data_out = (((((- (IData)((0U == (IData)(vlSelf->sel)))) 
-                           & (IData)(vlSelf->data_in0)) 
-                          | ((- (IData)((1U == (IData)(vlSelf->sel)))) 
-                             & (IData)(vlSelf->data_in1))) 
-                         | ((- (IData)((2U == (IData)(vlSelf->sel)))) 
-                            & (IData)(vlSelf->data_in2))) 
-                        | ((- (IData)((3U == (IData)(vlSelf->sel)))) 
-                           & (IData)(vlSelf->data_in3)));
+    vlSelf->y = (1U & (((((IData)((3U != (3U & (IData)(vlSelf->s)))) 
+                          | (IData)(vlSelf->a)) & ((IData)(
+                                                           (1U 
+                                                            != 
+                                                            (3U 
+                                                             & (IData)(vlSelf->s)))) 
+                                                   | ((IData)(vlSelf->a) 
+                                                      >> 1U))) 
+                        & ((IData)((2U != (3U & (IData)(vlSelf->s)))) 
+                           | ((IData)(vlSelf->a) >> 2U))) 
+                       & (((IData)(vlSelf->s) | ((IData)(vlSelf->s) 
+                                                 >> 1U)) 
+                          | ((IData)(vlSelf->a) >> 3U))));
 }
 
 void Vmux41___024root___eval(Vmux41___024root* vlSelf) {
@@ -56,15 +61,9 @@ void Vmux41___024root___eval_debug_assertions(Vmux41___024root* vlSelf) {
     Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmux41___024root___eval_debug_assertions\n"); );
     // Body
-    if (VL_UNLIKELY((vlSelf->data_in0 & 0xfcU))) {
-        Verilated::overWidthError("data_in0");}
-    if (VL_UNLIKELY((vlSelf->data_in1 & 0xfcU))) {
-        Verilated::overWidthError("data_in1");}
-    if (VL_UNLIKELY((vlSelf->data_in2 & 0xfcU))) {
-        Verilated::overWidthError("data_in2");}
-    if (VL_UNLIKELY((vlSelf->data_in3 & 0xfcU))) {
-        Verilated::overWidthError("data_in3");}
-    if (VL_UNLIKELY((vlSelf->sel & 0xfcU))) {
-        Verilated::overWidthError("sel");}
+    if (VL_UNLIKELY((vlSelf->a & 0xf0U))) {
+        Verilated::overWidthError("a");}
+    if (VL_UNLIKELY((vlSelf->s & 0xfcU))) {
+        Verilated::overWidthError("s");}
 }
 #endif  // VL_DEBUG

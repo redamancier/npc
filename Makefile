@@ -24,7 +24,7 @@ sim:
 	@echo "-- RUN --------------------"
 	# @rm -rf logs
 	# @mkdir -p logs
-	./obj_dir/Vtop
+	./obj_dir/Vmux41
 	gtkwave obj_dir/mux41.vcd
 	#运行可执行文件，并运行gtkwave得到仿真波形
 

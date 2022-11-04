@@ -10,12 +10,9 @@
 
 Vmux41::Vmux41(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new Vmux41__Syms(_vcontextp__, _vcname__, this)}
-    , data_in0{vlSymsp->TOP.data_in0}
-    , data_in1{vlSymsp->TOP.data_in1}
-    , data_in2{vlSymsp->TOP.data_in2}
-    , data_in3{vlSymsp->TOP.data_in3}
-    , sel{vlSymsp->TOP.sel}
-    , data_out{vlSymsp->TOP.data_out}
+    , a{vlSymsp->TOP.a}
+    , s{vlSymsp->TOP.s}
+    , y{vlSymsp->TOP.y}
     , rootp{&(vlSymsp->TOP)}
 {
 }

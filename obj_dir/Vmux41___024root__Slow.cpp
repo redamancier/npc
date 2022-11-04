@@ -52,10 +52,7 @@ void Vmux41___024root___ctor_var_reset(Vmux41___024root* vlSelf) {
     Vmux41__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmux41___024root___ctor_var_reset\n"); );
     // Body
-    vlSelf->data_in0 = VL_RAND_RESET_I(2);
-    vlSelf->data_in1 = VL_RAND_RESET_I(2);
-    vlSelf->data_in2 = VL_RAND_RESET_I(2);
-    vlSelf->data_in3 = VL_RAND_RESET_I(2);
-    vlSelf->sel = VL_RAND_RESET_I(2);
-    vlSelf->data_out = VL_RAND_RESET_I(2);
+    vlSelf->a = VL_RAND_RESET_I(4);
+    vlSelf->s = VL_RAND_RESET_I(2);
+    vlSelf->y = VL_RAND_RESET_I(1);
 }

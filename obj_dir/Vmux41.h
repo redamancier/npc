@@ -27,12 +27,9 @@ class Vmux41 VL_NOT_FINAL {
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN8(&data_in0,1,0);
-    VL_IN8(&data_in1,1,0);
-    VL_IN8(&data_in2,1,0);
-    VL_IN8(&data_in3,1,0);
-    VL_IN8(&sel,1,0);
-    VL_OUT8(&data_out,1,0);
+    VL_IN8(&a,3,0);
+    VL_IN8(&s,1,0);
+    VL_OUT8(&y,0,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

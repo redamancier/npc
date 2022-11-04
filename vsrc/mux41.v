@@ -1,18 +1,8 @@
 
-module mux41 #(
-parameter DW = 2
-)(
-    input    [DW-1:0]    data_in,
-    input    [1:0] sel,
-    output    [DW-1:0]    data_out
+module mux41(
+    input    [3:0] a,
+    input    [1:0] s,
+    output   y
 );
-    wire    sel_in0;
-    wire    sel_in1;
-    wire    sel_in2;
-    wire    sel_in3;
-    assign    sel_in0 = (sel==2'b00);
-    assign    sel_in1 = (sel==2'b01);
-    assign    sel_in2 = (sel==2'b10);
-    assign    sel_in3 = (sel==2'b11);
-    assign    data_out = ({DW{sel_in0}}&data_in0) | ({DW{sel_in1}}&data_in1) | ({DW{sel_in2}}&data_in2) | ({DW{sel_in3}}&data_in3);
+    assign    y = ((~s[0])|(~s[1])|a[0]) & ((~s[0])|s[1]|a[1]) & (s[0]|(~s[1])|a[2]) & (s[0]|s[1]|a[3]);
 endmodule
